@@ -61,7 +61,7 @@ function row(k, v){ return v ? "<dt>"+k+"</dt><dd>"+v.replace(/</g,"&lt;")+"</dd
 function show(granted){
   $("entry").classList.add("hide"); $("result").classList.remove("hide");
   const b = $("banner");
-  b.textContent = granted ? "ACCESS GRANTED" : "ACCESS DENIED";
+  b.textContent = granted ? "MODULE VERIFIED" : "MOTUDE NOT VERIFIED";
   b.className = "banner " + (granted ? "ok" : "no");
   $("details").innerHTML =
     (granted ? "" : '<dt style="margin-top:0">Correct details for this equipment</dt>') +
