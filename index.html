@@ -264,6 +264,15 @@
       $("icon").classList.toggle("hide", ok);
       $("msg").classList.toggle("hide", ok);
       $("again").classList.toggle("hide", ok);
+      const al = $("alpha");
+      al.textContent = "";
+      al.classList.toggle("hide", !ok);
+      if (ok) {
+        const s = document.createElement("small"), b = document.createElement("b");
+        s.textContent = "Tell this code to the control person";
+        b.textContent = rec[3];
+        al.append(s, b);
+      }
       const dl = $("details"); dl.textContent = "";
       if (ok) {                       // details are shown ONLY when the code is correct
         addRow(dl, "Functional Location", key);
